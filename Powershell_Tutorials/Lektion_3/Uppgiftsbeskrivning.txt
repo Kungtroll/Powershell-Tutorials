@@ -1,0 +1,3 @@
+Skapa en funktion som kan addera, subtrahera, multiplicera eller dividera två tal och returnera resultatet.
+Funktionen ska acceptera inparametrar av typen -tal1 -operator -tal2, exempel "mittscript.ps1 -tal1 2 -operator - -tal2 3"
+Om Parametrarna saknas ska funktionen fråga efter dem.

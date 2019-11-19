@@ -1,0 +1,17 @@
+Ni har fått två listor på servrar: Servers.csv och ServersCleaned.csv
+
+Övningen kan göras med olika svårighetsgrader, välj den nivå du känner dig motiverad och bekväm med att lösa, du kan alltid återanvända koden till nästa svårighetsnivå:
+
+"Enklare"
+1. Ta ut IPv4 adressen från Active Directory för servrarna i filen ServersCleaned.csv
+2.  Spara ner Servernamnen och ip-adresserna i en CSV-fil. 
+
+"Klurigare"
+1. Ta ut IPv4 adressen från Active Directory för servrarna i filen Servers.csv, 
+det har smugit sig in skräptecken i början på varje servernamn som behöver filtreras bort för att få de rätta servernamnen.
+2.  Spara ner de tvättade Servernamnen och ip-adresserna i en CSV-fil. 
+
+"Ännu klurigare"
+1. Det har smugit sig in skräptecken i början på varje servernamn som behöver filtreras bort för att få de rätta servernamnen.
+2. Ta ut IPv4 adressen, och datumet då maskinkontot skapades från Active Directory för servrarna i filen Servers.csv, men bara för de datorkonton som skapats under år 2019.
+2.  Spara ner de tvättade Servernamnen, datumen (och tid) för när datorkontona skapades och ip-adresserna i en CSV-fil
