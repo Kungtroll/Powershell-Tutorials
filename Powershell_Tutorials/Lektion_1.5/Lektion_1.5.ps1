@@ -159,6 +159,9 @@ get-childitem Variable:
 $MyNewVariable = "Just a new value"
 get-childitem Variable: |Select-object -First 10
 
+#If you wondered, I could list the variables another way...
+Get-Variable
+
 #I can also view and manipulate my certificate store
 #Let's look at my personal certificates
 Get-ChildItem Cert:\CurrentUser\My
