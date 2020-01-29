@@ -9,8 +9,8 @@ Powershell providers
 #comments, and Powershell will not read it as executable
 #code/commands.
 #With the 
-<##>
-#You can make commmentary text stretchin over multiple lines.
+    <##>
+#You can make commmentary text stretching over multiple lines.
 
 <#
 Multiple 
