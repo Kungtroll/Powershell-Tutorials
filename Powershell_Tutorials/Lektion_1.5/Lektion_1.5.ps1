@@ -101,7 +101,7 @@ Get-help Select-Object
 Get-help get-help
 
 #Show just examples
-Get-help -Examples
+Get-help Select-Object -Examples
 
 #I need the syntax...
 Get-Command Get-help -Syntax
