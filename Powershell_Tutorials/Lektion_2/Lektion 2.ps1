@@ -15,14 +15,25 @@ Stränghantering
 
 ForEach
 
+#>
+
+$Numbers = @(1,2,3,4,5,6,7,8,9,0)
+write-host "Element 0 är" $Numbers[0] -ForegroundColor Green
+
 Foreach ($number in $numbers)
     {
     write-host $number -ForegroundColor Green
     }
 
-# I pipeline
 
+#I pipeline
 $Numbers | %($_){write-host $_ -ForegroundColor Green}
+#Or without % alias
+$Numbers | ForEach-Object ($_){write-host $_ -ForegroundColor Green}
+#You can also use the foreach method on the array-object
+$Numbers.ForEach({write-host $_ -ForegroundColor Green})
+
+<#
 
 Export-csv / Import-csv
 Select-Object -Expandproperty
