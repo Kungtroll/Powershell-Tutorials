@@ -98,7 +98,7 @@ Get-Help
 Get-help Select-Object
 
 #Getting help about the Get-Help cmdlet...
-Get-help get-help
+Get-help get-help -ShowWindow
 
 #Show just examples
 Get-help Select-Object -Examples
