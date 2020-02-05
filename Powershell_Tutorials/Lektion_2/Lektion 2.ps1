@@ -1,6 +1,6 @@
 ﻿<# 
 
-Recap from session 1:
+Recap from session 1 and 1.5:
 
 Datypes: Int, string, boolean, single, datetime, xml, array, hashtable
 
@@ -12,6 +12,28 @@ $objectname | get-member
 
 String management
 ForEach
+
+Get-Command -Noun *sql*
+Get-Command -Verb Get
+Show-Command
+Get-Alias
+Find-Module
+Install-Module
+Update-Module
+Get-Module
+Import-Module
+Select-Object
+
+$env:PSModulePath
+
+Get-Help
+Get-Help About_*
+Update-Help
+
+Get-PSProvider
+Get-ChildItem Env:
+Get-Item HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+Get-Variable
 
 #>
 
