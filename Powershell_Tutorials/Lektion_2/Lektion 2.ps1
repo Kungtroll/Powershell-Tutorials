@@ -38,6 +38,7 @@ Get-Variable
 #>
 
 $Numbers = @(1,2,3,4,5,6,7,8,9,0)
+$Numbers = @(1..10)
 write-host "Element 0 is" $Numbers[0] -ForegroundColor Green
 
 # The simplest way of looping through the array is to use a 
@@ -178,9 +179,9 @@ While ($Sant -ne $True)
 # function is not available outside the function.
 # This is just a brief introduction to functions, there is a lot
 # more to know about functions.
-Function WriteMyName ($name)
+Function WriteMyName ([Int32]$name)
     {
-        $Greeting = "Hello " + $Name
+        $Greeting = "Hello $Name"
         Return $Greeting
     }
 
