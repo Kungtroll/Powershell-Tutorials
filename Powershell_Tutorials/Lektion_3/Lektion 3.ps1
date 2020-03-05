@@ -48,26 +48,21 @@ Funktioner
  Funktionernas egna scope kan också begränsas till scriptet om dessa inte deklareras som global
   Exempel
 #>
- Function Global:Restart-Servers ($Serverlist)
-    {
+ Function Global:Restart-Servers ($Serverlist){
     #Här ska koden stå
     $ListServerStatus = @()
-    ForEach ($Server in $Serverlist)
-        {
-        Try
-            {
+    ForEach ($Server in $Serverlist){
+        Try{
             invoke-command $Server {Restart-computer}
             $ListServerStatus += ($Server+"Rebooted")
-            }
-        Catch
-            {
+        }Catch{
             $ListServerStatus += ($Server+"Failed")
-            }       
-        }
+        }       
+    }
 
     #Vi kan returnera en lista på vilka servrar som kunde startas om i en till array. 
     Return $ListServerstatus
-    }
+}
 
 $Servers =@("server1","server2","server3")
 $Rebootstatus = Restart-Servers($Servers)
@@ -79,24 +74,23 @@ Då kommer inte funktionen försöka köra om den inte får rätt format på arg
 
 Parametrarna kan deklareras inne i funktionen med Param 
 #>
-Function Get-Coffee
-{
-    Param ($Strength, [Boolean]$Milk)
+Function Get-Coffee{
+    Param (
+        $Strength, 
+        [Boolean]$Milk
+    )
 
-    Process
-        {
+    Process{
         Write-host $Strength "Coffee, Milk:" $Milk -ForegroundColor Green
-        }
+    }
 }
 
 # likväl som att deklareras på samma rad som funktionens namn: 
 
-Function Get-Coffee ($Strength, [Boolean]$Milk)
-{
-    Process
-        {
+Function Get-Coffee ($Strength, [Boolean]$Milk){
+    Process{
         Write-host $Strength "Coffee, Milk:" $Milk -ForegroundColor Green
-        }
+    }
 }
 
 #Att kalla på funktionen, argumenten (parameters) efter varandra med mellanslag
@@ -110,11 +104,10 @@ Get-Coffee -Strength Strong -Milk $True
 #Ett annat exempel på hur man kan kalla på en funktion, här görs en read-host för
 # att skicka argument till funktionen.
 
-Function WriteMyName ($name)
-    {
-        $Halsning = "Hej " + $Name
-        Return $Halsning
-    }
+Function WriteMyName ($name){
+    $Halsning = "Hej " + $Name
+    Return $Halsning
+}
 
 $Myname = read-host "Vad heter du?"
 write-host -ForegroundColor Green (WriteMyName $Myname)
@@ -128,12 +121,10 @@ Exempel Get-ADUser, Remove-ADUser, Get-NetFirewallRule
 Det går även att ange ett defaultvärde på ett argument (om användaren inte skickar med något)
 #>
 
-Function Get-Coffee ($Strength = "Strong", [Boolean]$Milk = $false)
-{
-    Process
-        {
+Function Get-Coffee ($Strength = "Strong", [Boolean]$Milk = $false){
+    Process{
         Write-host $Strength "Coffee, Milk:" $Milk -ForegroundColor Green
-        }
+    }
 }
 
 #Här kallar vi på Get-Coffee utan argument och accepterar defaultkaffe
@@ -142,18 +133,15 @@ Get-Coffee
 
 # Man kan även göra argumenten Mandatory för att Powershell ska fråga om argumentet om det saknas.
 
-Function Get-Coffee
-{
-    Param 
-        (    
+Function Get-Coffee{
+    Param(    
         [parameter(Mandatory=$true)]$Strength,
         [parameter(Mandatory=$False)][Boolean]$Milk = $False    
-        )
+    )
 
-    Process
-        {
+    Process{
         Write-host $Strength "Coffee, Milk:" $Milk -ForegroundColor Green
-        }
+    }
 }
 
 Get-Coffee
@@ -164,7 +152,9 @@ AllowNull
 AllowEmptyString
 ValidateCount (specifies the minimum and maximum number of parameter values)
 ValidateLength (specifies the minimum and maximum number of characters in a parameter)
+ValidateSet (specifies a set of allowed values)
 ValidatePattern (specifies a regular expression that is compared to the parameter)
+ValidateScript (Rund code to validate the parameter and have custom actions based on the result)
 
 [parameter(Mandatory=$false, ValueFromPipeline=$true)][Boolean]$Milk
 
