@@ -1,0 +1,12 @@
+1. 	Variables, Value Types, Objects and strings
+1.5	Get-help, Cmdlets, Alias, Modules and Powershell providers
+2.	Loops, ForEach, Foreach-Object, Do-While, If-Else, Switch, Functions introduction
+3.	Functions (Parameters, Begin, Process, End)
+4. 	Objects, Classes, Enum, Intro to Error-handling
+5.	Error-handling with Try-Catch, Finally, Erroraction, $Error, Throw
+6.	PS Remoting,PSSession, Invoke-Command WinRM, TrustedHosts, GIT
+7.	Runbooks, Workflows, InlineScript, Parallellization, VSCode,
+8. 	Build a function with Pipeline input, ForEach, Try-Catch, ErrorAction
+9.	Function and Pipeline input repeated.
+10.	Parallellization, PSjobs, Runspaces, ForEach(-Object) -Parallel, Runspacepools
+11.	Requested session, how to log to top of a file.
