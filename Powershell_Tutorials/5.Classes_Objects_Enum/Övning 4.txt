@@ -1,0 +1,9 @@
+�vning:
+Skapa ett script som skapar en array med servrar, g�r in p� varje server
+och l�ser ut Windowsproductname och windowsversion f�r servern och spottar ut dessa tillsammans
+med servernamnet i en csv-fil (gl�m inte att export-csv vill ha en array av objekt). 
+
+Om det inte g�r att ansluta till servern s� ska f�lten Windowsproductname och windowsversion
+ist�llet inneh�lla texten "Connection failed".
+
+Vill man snygga till det kan man v�lja att l�sa listan med servrar fr�n en fil.

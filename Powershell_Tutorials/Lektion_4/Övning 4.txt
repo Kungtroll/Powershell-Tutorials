@@ -1,9 +1,0 @@
-Övning:
-Skapa ett script som skapar en array med servrar, går in på varje server
-och läser ut Windowsproductname och windowsversion för servern och spottar ut dessa tillsammans
-med servernamnet i en csv-fil (glöm inte att export-csv vill ha en array av objekt). 
-
-Om det inte går att ansluta till servern så ska fälten Windowsproductname och windowsversion
-istället innehålla texten "Connection failed".
-
-Vill man snygga till det kan man välja att läsa listan med servrar från en fil.

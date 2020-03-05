@@ -1,0 +1,22 @@
+I got a request on how to write to the top of a log-file 
+instead of appending to the end of the file.
+
+I googled it and found now other way of doing this
+but to read all the content from the file and re-write
+the file content to the file together with the new line.
+I chose the solution where the new content (lines) is 
+stored in an array as the first elements and the 
+original file content is added as the next element in
+the array. Then the whole array is written back to the 
+file.
+
+Try solving this yourself, and take a peek at my cmdlet
+if you get stuck. Beware of how powershell auto-assing
+the type for a variable, a single line may become a
+string object while several lines will become an array 
+of string objects, depending on what you put in you may
+get unexpected results if you don't manage the type 
+assignment yourself. The cmdlet was produced in a hurry, so
+bugs are likely to be included.
+
+
