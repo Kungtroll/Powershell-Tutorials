@@ -20,15 +20,15 @@ Funktioner
  resultatet skulle bli detsamma.
  #>
 
- Function Test
-    {
-        $a = 1
-        $b = 2
+ Function Test{
+    $a = 1
+    $b = 2
 
-        $a
-        Return $b
-    }
-    Write-host (Test) -ForegroundColor Green
+    $a
+    Return $b
+}
+Write-host (Test) -ForegroundColor Green
+
 <#
  Funktioner begränsar "scope" för variabler, en variabel som används i en funktion
  är inte tillgänglig utanför funktionen om den inte är deklarerad som "global" eller "script".
